@@ -21,6 +21,6 @@ public class App {
                 }
             }
         }
-        return count == needWord.length();
+        return count >= needWord.length();
     }
 }
