@@ -18,6 +18,7 @@ public class App {
             for (String wordsLoop: listForWords) {
                 if (needWordLoop.equalsIgnoreCase(wordsLoop)) {
                     count++;
+                    listForWords.remove(wordsLoop);
                     break;
                 }
             }
