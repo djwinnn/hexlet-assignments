@@ -14,12 +14,12 @@ public class App {
 
     public static String toString(Map<String, Integer> wordCount) {
         StringBuilder result = new StringBuilder();
-        result.append("{\n");
+        result.append("{");
         for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
             if (entry.getKey().isEmpty()) {
                 result.append("");
             } else {
-                result.append("  ").append(entry.getKey()).append(": ").append(entry.getValue()).append("\n");
+                result.append("\n  ").append(entry.getKey()).append(": ").append(entry.getValue()).append("\n");
             }
 
         }
