@@ -23,6 +23,6 @@ public class App {
             result.append("  ").append(entry.getKey()).append(": ").append(entry.getValue()).append("\n");
         }
         result.append("}");
-        return result.toString();
+        return result.toString().trim();
     }
 }
