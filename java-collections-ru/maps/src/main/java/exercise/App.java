@@ -8,7 +8,7 @@ public class App {
         String[] words = text.split(" ");
         for (String word : words) {
             if (word.isEmpty()) {
-                return null;
+                return wordCount;
             } else {
                 wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
             }
