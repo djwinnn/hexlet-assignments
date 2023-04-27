@@ -19,7 +19,7 @@ public class App {
             if (entry.getKey().isEmpty()) {
                 result.append("");
             } else {
-                result.append("\n  ").append(entry.getKey()).append(": ").append(entry.getValue()).append("\n");
+                result.append("  ").append(entry.getKey()).append(": ").append(entry.getValue()).append("\n");
             }
 
         }
