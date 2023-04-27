@@ -16,11 +16,7 @@ public class App {
         StringBuilder result = new StringBuilder();
         result.append("{\n");
         for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
-            result.append("  ")
-                    .append(entry.getKey())
-                    .append(": ")
-                    .append(entry.getValue())
-                    .append("\n");
+            result.append("  ").append(entry.getKey()).append(": ").append(entry.getValue()).append("\n");
         }
         result.append("}");
         return result.toString();
