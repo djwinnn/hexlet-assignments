@@ -7,14 +7,17 @@ public class App {
         Map<String, Integer> wordCount = new HashMap<>();
         String[] words = text.split(" ");
         for (String word : words) {
-            wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
+            if (word.isEmpty()) {
+                return null;
+            } else {
+                wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
+            }
         }
         return wordCount;
     }
 
     public static String toString(Map<String, Integer> wordCount) {
         StringBuilder result = new StringBuilder();
-
         result.append("{\n");
         for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
             if (entry.getKey().isEmpty()) {
@@ -22,7 +25,6 @@ public class App {
             } else {
                 result.append("  ").append(entry.getKey()).append(": ").append(entry.getValue()).append("\n");
             }
-
         }
         result.append("}");
         return result.toString();
