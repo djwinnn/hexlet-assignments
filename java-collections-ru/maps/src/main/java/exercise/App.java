@@ -19,7 +19,7 @@ public class App {
     public static String toString(Map<String, Integer> wordCount) {
         StringBuilder result = new StringBuilder();
 
-        if (wordCount.containsKey("")) {
+        if (wordCount.containsValue(0)) {
             result.append("{");
         } else {
             result.append("{\n");
