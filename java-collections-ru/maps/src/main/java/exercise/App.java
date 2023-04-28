@@ -18,16 +18,13 @@ public class App {
 
     public static String toString(Map<String, Integer> wordCount) {
         StringBuilder result = new StringBuilder();
-        result.append("{\n");
+        result.append("{");
         for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
+            if (entry.getValue() > 1) {
+                result.append("\n");
+            }
             result.append("  ").append(entry.getKey()).append(": ").append(entry.getValue()).append("\n");
         }
-        result.append("}");
-        if (result.equals("{\n}")) {
-            return "{}";
-        } else {
-            return result.toString();
-        }
-
+        return result.toString();
     }
 }
