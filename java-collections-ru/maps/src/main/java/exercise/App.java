@@ -20,6 +20,8 @@ public class App {
         StringBuilder result = new StringBuilder();
         result.append("{");
         if (wordCount.containsKey("")) {
+            result.append("");
+        } else {
             result.append("\n");
         }
         for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
