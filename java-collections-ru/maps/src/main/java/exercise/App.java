@@ -22,7 +22,10 @@ public class App {
         for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
             if (entry.getValue() > 1) {
                 result.append("\n");
+            } else {
+                result.append("");
             }
+
             result.append("  ").append(entry.getKey()).append(": ").append(entry.getValue()).append("\n");
         }
         return result.toString();
