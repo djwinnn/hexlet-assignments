@@ -19,8 +19,8 @@ public class App {
                     environmentVariables.put(keyValue[0].replace("X_FORWARDED_", ""), keyValue[1]);
                 });
         return environmentVariables.entrySet().stream()
-                .map(entry -> entry.getKey() + "=" + entry.getValue())
                 .sorted()
+                .map(entry -> entry.getKey() + "=" + entry.getValue())
                 .collect(Collectors.joining(","));
     }
 }
