@@ -20,6 +20,7 @@ public class App {
                 });
         return environmentVariables.entrySet().stream()
                 .map(entry -> entry.getKey() + "=" + entry.getValue())
+                .sorted()
                 .collect(Collectors.joining(","));
     }
 }
