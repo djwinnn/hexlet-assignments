@@ -14,12 +14,12 @@ public class App {
                 .map(line -> line.replace("environment=\"", "").replace("\"", ""))
                 .flatMap(line -> Arrays.stream(line.split(",")))
                 .filter(pair -> pair.startsWith("X_FORWARDED_"))
+                .sorted()
                 .forEach(pair -> {
                     String[] keyValue = pair.split("=");
                     environmentVariables.put(keyValue[0].replace("X_FORWARDED_", ""), keyValue[1]);
                 });
         return environmentVariables.entrySet().stream()
-                .sorted()
                 .map(entry -> entry.getKey() + "=" + entry.getValue())
                 .collect(Collectors.joining(","));
     }
